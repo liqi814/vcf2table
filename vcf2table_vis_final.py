@@ -124,4 +124,4 @@ plt.subplots_adjust(left=0.125,
                     hspace=0.5)
 # fig.legend(loc='center right')
 fig.set_size_inches(28, 40)
-fig.savefig('dbGAP_BigBlock_QV_final_dash.pdf', dpi=400)
+fig.savefig('IGM_BigBlock_QV_final_dash.pdf', dpi=400)
