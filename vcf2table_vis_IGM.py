@@ -148,8 +148,8 @@ plt.subplots_adjust(left=0.125,
                     wspace=0.2,
                     hspace=0.5)
 fig.set_size_inches(28, 40)
-fig.savefig('IGM_BigBlock_QV_final_dash_wSampleID.pdf', dpi=400)
+fig.savefig('IGM_phasing_wSampleID.pdf', dpi=400)
 
 # hide sampleID
 ax1.set_yticklabels([])
-fig.savefig('IGM_BigBlock_QV_final_dash_woSampleID.pdf', dpi=400)
+fig.savefig('IGM_phasing_woSampleID.pdf', dpi=400)
