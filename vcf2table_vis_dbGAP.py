@@ -41,6 +41,16 @@ for sample_name in subset_case_phased_VCF.columns[~subset_case_phased_VCF.column
     elif '0|1' in subset_case_phased_VCF[sample_name].value_counts() and subset_case_phased_VCF[sample_name].value_counts()['0|1'] > subset_case_phased_VCF[sample_name].value_counts()['1|0']:
         subset_case_phased_VCF[sample_name].replace({'0|1': '1|0', '1|0': '0|1'}, inplace=True)
 
+
+# internalSentinelSNPSampleName = list(subset_case_phased_VCF.columns[(subset_case_phased_VCF[subset_case_phased_VCF.ID == 'chr3-44804157-T-C'].isin(['1|1', '0|1', '1|0'])).iloc[0]])
+# sentinelSNPSampleName = list(subset_case_phased_VCF.columns[(subset_case_phased_VCF[subset_case_phased_VCF.ID == 'chr3-44860894-T-A'].isin(['1|1', '0|1', '1|0'])).iloc[0]])
+# with open('dbGAP/sampleData/internalSentinelSNPSampleName.txt', 'w') as filehandle:
+#     for listitem in internalSentinelSNPSampleName:
+#         filehandle.write('%s\n' % listitem)
+# with open('dbGAP/sampleData/sentinelSNPSampleName.txt', 'w') as filehandle:
+#     for listitem in sentinelSNPSampleName:
+#         filehandle.write('%s\n' % listitem)
+
 with open("dbGAP/sampleData/sentinelSNPSampleName.txt", "r") as file:
     sentinelSNPSampleName = file.readlines()
 sentinelSNPSampleName = [x.strip() for x in sentinelSNPSampleName]
